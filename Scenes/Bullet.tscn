@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dax2u4rbv7l0"]
+[gd_scene load_steps=4 format=3 uid="uid://dax2u4rbv7l0"]
 
+[ext_resource type="Script" uid="uid://cfkhmyxj51mav" path="res://Scripts/Bullet.gd" id="1_14k46"]
 [ext_resource type="Texture2D" uid="uid://bgaxvlusho7jv" path="res://Assets/Bullet.png" id="1_vlxeq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14k46"]
 size = Vector2(20, 68)
 
 [node name="Bullet" type="Area2D"]
+z_index = -5
+script = ExtResource("1_14k46")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vlxeq")
