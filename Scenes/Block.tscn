@@ -2,8 +2,12 @@
 
 [node name="Block" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 108.0
+offset_bottom = 108.0
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 108.0
+color = Color(0.941176, 0.607843, 0.615686, 1)
