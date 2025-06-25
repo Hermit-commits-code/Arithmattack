@@ -1,13 +1,43 @@
-[gd_scene format=3 uid="uid://6h3ojpu4qji"]
+[gd_scene load_steps=4 format=3 uid="uid://6h3ojpu4qji"]
+
+[ext_resource type="Script" uid="uid://0fet4e4m1is3" path="res://Scripts/Block.gd" id="1_x55lh"]
+[ext_resource type="FontFile" uid="uid://b22svqdwpleyn" path="res://Assets/FredokaOne-Regular.ttf" id="2_ujcp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjsgv"]
+size = Vector2(108, 108)
 
 [node name="Block" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 108.0
 offset_bottom = 108.0
+script = ExtResource("1_x55lh")
+colors = Array[Color]([Color(0.980043, 0.605504, 0.397973, 1), Color(0.00392157, 0.776471, 0.00392157, 1), Color(0.227451, 0.494118, 0.905882, 1), Color(0.12549, 0.0745098, 0.207843, 1), Color(0.898039, 0.454902, 0.737255, 1), Color(0, 0.780392, 0.666667, 1)])
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 108.0
-offset_bottom = 108.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.941176, 0.607843, 0.615686, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ujcp4")
+theme_override_font_sizes/font_size = 70
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(54, 54)
+shape = SubResource("RectangleShape2D_rjsgv")
